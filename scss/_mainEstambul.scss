@@ -1,0 +1,43 @@
+.estambul {
+	margin: 5px;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 500px 500px;
+	grid-gap: 5px; 
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+    p {
+        grid-row: 1/1;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+@each $foto in estambulTopkapi, estambulTurkins, estambulDibujoMesquita, estambulDibujo, estambulHagiasofia, estambulGalata, estambulLamparas {
+    .foto__#{$foto} {
+        background-image: url('../imagenes/#{$foto}.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(1);
+    }
+}
+@each $foto in estambulTopkapi, estambulTurkins, estambulDibujoMesquita, estambulDibujo, estambulHagiasofia, estambulGalata, estambulLamparas {
+	.foto__#{$foto}:hover{
+		transform: scale(1.1);
+		transition: 1s;
+		z-index: 1000;
+		filter: grayscale(0);
+	}
+}
+@media (max-width: 425px) {
+    .estambul {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 400px 350px 750px 250px 250px 250px 450px;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .estambul {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 600px 550px 1050px 450px 550px 450px 550px;
+    }
+}

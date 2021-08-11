@@ -1,0 +1,43 @@
+.paris {
+	margin: 5px;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 500px 500px;
+	grid-gap: 5px; 
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+    p {
+        grid-row: 1/1;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+@each $foto in parisAirFrance, parisConPadres, parisLouvre, parisYoCaminando, parisDibujoNotredame, parisAscensorTorre, parisTrocadero {
+    .foto__#{$foto} {
+        background-image: url('../imagenes/#{$foto}.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(1);
+    }
+}
+@each $foto in parisAirFrance, parisConPadres, parisLouvre, parisYoCaminando, parisDibujoNotredame, parisAscensorTorre, parisTrocadero {
+    .foto__#{$foto}:hover{
+		transform: scale(1.1);
+		transition: 1s;
+		z-index: 1000;
+		filter: grayscale(0);
+    }   
+}
+@media (max-width: 425px) {
+    .paris {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 300px 350px 350px 750px 350px 250px 450px;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .paris {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 500px 450px 450px 850px 550px 350px 750px;
+    }
+}

@@ -1,0 +1,44 @@
+.dibujos {
+	margin: 5px;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 500px 500px 500px;
+	grid-gap: 5px; 
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+    p {
+        grid-row: 1/1;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+@each $foto in dibujoSamurai, dibujoMercado, dibujoPagoda2, dibujoPolaroid, dibujoTotoro, dibujoVitrales,dibujoKingKong, dibujoFuDog, dibujoPagoda, dibujoVitrales2, dibujoPalau {
+    .foto__#{$foto} {
+        background-image: url('../imagenes/#{$foto}.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: grayscale(1);
+    }   
+}
+@each $foto in dibujoSamurai, dibujoMercado, dibujoPagoda2, dibujoPolaroid, dibujoTotoro, dibujoVitrales, dibujoKingKong, dibujoFuDog, dibujoPagoda, dibujoVitrales2, dibujoPalau {
+	.foto__#{$foto}:hover{
+		transform: scale(1.1);
+        background-size: cover;
+        transition: 1s;
+		z-index: 1000;
+        filter: grayscale(0);
+	}
+}
+@media (max-width: 425px){
+    .dibujos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 600px 450px 950px 400px 550px 850px 750px 500px 500px 500px 500px;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .dibujos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 600px 650px 950px 700px 550px 850px 750px 600px 600px 600px 600px;
+    }
+}

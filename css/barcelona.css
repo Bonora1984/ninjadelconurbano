@@ -1,0 +1,618 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  height: 130px;
+  margin: 5px;
+}
+
+.header .container {
+  max-width: 1000px;
+  margin: auto;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.header img {
+  height: 120px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1 1 1 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header__menu {
+  width: 1000px;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin: 0;
+}
+
+.header li a {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 30px;
+  color: #000;
+}
+
+@media (max-width: 425px) {
+  .header {
+    height: 110px;
+  }
+  .header .container {
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .container .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .container .header__logo img {
+    height: 85px;
+  }
+  .header .container .header__menu {
+    height: 110px;
+  }
+  .header .container .header__menu ul {
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .container .header__menu ul li {
+    padding: 5px;
+  }
+  .header .container .header__menu ul li a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 120px;
+  }
+  .header .container {
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .container .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .container .header__logo img {
+    height: 95px;
+  }
+  .header .container .header__menu {
+    height: 120px;
+  }
+  .header .container .header__menu ul {
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .container .header__menu li {
+    padding: 5px;
+  }
+  .header .container .header__menu li a {
+    font-size: 18px;
+  }
+}
+
+.barcelona {
+  margin: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 500px 500px;
+      grid-template-rows: 500px 500px;
+  grid-gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.barcelona p {
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.foto__barcelonaCasaMila2 {
+  background-image: url("../imagenes/barcelonaCasaMila2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__barcelonaCirculo {
+  background-image: url("../imagenes/barcelonaCirculo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__barcelonaRochiPalau {
+  background-image: url("../imagenes/barcelonaRochiPalau.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__barcelonaVitralesSagradaFamilia {
+  background-image: url("../imagenes/barcelonaVitralesSagradaFamilia.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__yoFefe {
+  background-image: url("../imagenes/yoFefe.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__barcelonaHospital {
+  background-image: url("../imagenes/barcelonaHospital.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__barcelonaDragon {
+  background-image: url("../imagenes/barcelonaDragon.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.foto__barcelonaCasaMila2:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.foto__barcelonaCirculo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.foto__barcelonaRochiPalau:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.foto__barcelonaVitralesSagradaFamilia:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.foto__yoFefe:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.foto__barcelonaHospital:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.foto__barcelonaDragon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1000;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+@media (max-width: 425px) {
+  .barcelona {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 200px 400px 350px 750px 250px 350px 750px 450px;
+        grid-template-rows: 200px 400px 350px 750px 250px 350px 750px 450px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .barcelona {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 150px 600px 550px 950px 250px 550px 850px 750px;
+        grid-template-rows: 150px 600px 550px 950px 250px 550px 850px 750px;
+  }
+}
+
+.footer {
+  height: auto;
+  margin: 0px 5px 5px 5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 19, 19, 0.7)), to(white));
+  background-image: linear-gradient(rgba(19, 19, 19, 0.7), white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer #spotify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer #andreGuide {
+  width: 700px;
+  height: 200px;
+  border: 2px solid #000;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer #redesSociales {
+  height: auto;
+  margin: 110px 50px 110px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#instagram__logo {
+  width: 30px;
+  height: auto;
+}
+
+#instagram__link a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+#twitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#twitter__logo {
+  width: 30px;
+  height: auto;
+}
+
+#twitter__link a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+#youtube {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#youtube__logo {
+  width: 30px;
+  height: auto;
+}
+
+#youtube__link a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+#spotify {
+  margin: 10px;
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#spotify__logo {
+  width: 30px;
+  height: auto;
+}
+
+#spotify__link a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+#propiedadIntelectual {
+  font-family: serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  font-size: 18px;
+}
+
+#copyright {
+  font-family: serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  font-size: 15pxpx;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #andreGuide {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #andreGuide {
+    max-width: 400px;
+  }
+  #propiedadIntelectual {
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #andreGuide {
+    max-width: 350px;
+  }
+}
+/*# sourceMappingURL=barcelona.css.map */

@@ -1,0 +1,105 @@
+.header {
+    height: 130px;
+    margin: 5px;
+    .container{
+        max-width: 1000px;
+        margin: auto;
+        height: 130px;
+        display: flex;
+        padding: 0;
+    }
+    img{
+        height: 120px;
+        width: auto;
+        display: flex;
+        padding: 1 1 1 5px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__menu{
+        width: 1000px;
+        height: 130px;
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        text-decoration: none;
+        margin: 0;
+        }
+    li a{
+        font-family: 'Roboto Condensed', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 800;
+        margin: 30px;
+        color: #000;
+    }
+}
+@media (max-width: 425px) {
+    .header {
+        height: 110px;
+        .container {
+            height: 110px;
+            display: flex;
+            .header__logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    height: 85px;
+                }
+            }
+            .header__menu {
+                height: 110px;            
+                ul {
+                height: 110px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                li {
+                    padding: 5px;
+                    a {
+                    font-size: 15px;
+                    } 
+                }
+            }
+            }
+    }
+}
+}
+@media (max-width: 768px) {
+    .header {
+        height: 120px;
+        .container {
+            height: 120px;
+            display: flex;
+                .header__logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                        img {
+                            height: 95px;
+                        }
+                }
+                .header__menu {
+                    height: 120px;            
+                        ul {
+                            height: 110px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            }
+                            li {
+                                padding: 5px;
+                                    a {
+                                        font-size: 18px;
+                                    } 
+                            }   
+                        }
+                }
+        }
+}

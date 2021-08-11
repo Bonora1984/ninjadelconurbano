@@ -1,0 +1,44 @@
+.about {
+	margin: 5px;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 500px 500px;
+	grid-gap: 5px; 
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+    p {
+        grid-row: 1/1;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+@each $foto in yoRouchens, yoLeaDron, yoBarcelona2015, yoGlobmaster, yoRochiLetos, dibujoNAA, textoAbout, yoPotrerillos {
+	.foto__#{$foto} {
+		background-image: url('../imagenes/#{$foto}.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: grayscale(1);
+	}
+}
+@each $foto in yoRouchens, yoLeaDron, yoBarcelona2015, yoGlobmaster, yoRochiLetos, dibujoNAA, textoAbout, yoPotrerillos {
+	.foto__#{$foto}:hover{
+		transform: scale(1.2);
+		background-size: cover;
+		transition: 1.5s;
+		z-index: 1000;
+		filter: grayscale(0);
+	}
+}
+@media (max-width: 425px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 400px 350px 750px 250px 350px 250px 350px;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 600px 550px 700px 250px 550px 450px 650px;
+    }
+}

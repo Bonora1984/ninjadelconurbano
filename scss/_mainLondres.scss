@@ -1,0 +1,43 @@
+.londres {
+	margin: 5px;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 500px 500px;
+	grid-gap: 5px; 
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+    p {
+        grid-row: 1/1;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+@each $foto in londresAvro, londresLibros, londresTipico, londresNUKdibujo, londresPeroni, londresP51, londresPicadilly {
+    .foto__#{$foto} {
+        background-image: url('../imagenes/#{$foto}.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(1);
+    }   
+}
+@each $foto in londresAvro, londresLibros, londresTipico, londresNUKdibujo, londresPeroni, londresP51, londresPicadilly {
+	.foto__#{$foto}:hover{
+		transform: scale(1.1);
+		transition: 1s;
+		z-index: 1000;
+		filter: grayscale(0);
+	}
+}
+@media (max-width: 425px) {
+    .londres {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 250px 250px 750px 250px 450px 250px 450px;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .londres {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 450px 350px 650px 300px 750px 450px 550px;
+    }
+}

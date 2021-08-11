@@ -1,0 +1,206 @@
+.intro {
+	background-image: url(../imagenes/istambulbn.jpg);
+    height: 300px;
+	margin: 5px;
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    .intro__titulo {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        padding:15px;
+        background-color: rgba(255, 255, 255, 0.7);
+        box-sizing: border-box;
+        animation-name: fade-in;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+    #introEspacioVacio {
+        height: 127px;
+    }   
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.ciudades {
+	margin: 5px;
+	display: grid;/* GRID AL PADRE */
+	grid-template-columns: 2fr 2fr 2fr 2fr; /* CANTIDAD DE COLUMNAS */
+	grid-template-rows: 600px 600px; /* CANTIDAD DE FILAS */
+	grid-gap: 5px; /* SEPARACION ENTRE ITEMS DEL GRID */
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+}
+@each $foto in colonbn, estambulHagiasofia, dubrovnikbn, notredam, londresByn, ninjaByN {
+    .#{$foto} {
+        background-image: url('../imagenes/#{$foto}.jpg');
+        background-position: top;
+	background-size: cover;
+    }
+    
+}
+@each $foto in colonbn, estambulHagiasofia, dubrovnikbn, notredam, londresByn, ninjaByN {
+    .#{$foto}:hover {
+            transition: 1s;
+            transform: scale(1.05);
+    }
+}
+@each $tituloCiudades in barcelona__titulo, estambul__titulo, dubrovnik__titulo, paris__titulo, londres__titulo, dibujos__titulo {
+    .#{$tituloCiudades} {
+    font-size: 30px;
+	text-align: center;
+	margin: auto;
+	background-color: rgba(19, 19, 19, 0.7);
+	font-family: 'Roboto Condensed', sans-serif;    
+    }
+    
+}
+@each $espacioVacio in barcelonaEspacioVacio, estambulEspacioVacio, dubrovnikEspacioVacio, parisEspacioVacio, londresEspacioVacio, dibujosEspacioVacio {
+    .#{$espacioVacio} {
+        height:285px
+    }  
+}
+@each $linkCiudades in barcelona__titulo a, estambul__titulo a, dubrovnik__titulo a, paris__titulo a, londres__titulo a, dibujos__titulo a {
+    .#{$linkCiudades} {
+    text-decoration: none;
+	color: #fff;    
+    }
+}
+@media (max-width: 425px) {
+    .intro {
+        background-image: url(../imagenes/istambulbn.jpg);
+        height: 250px;
+        margin: 5px;
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .intro__titulo {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            padding:15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-sizing: border-box;
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        #introEspacioVacio {
+            height: 100px;
+        }
+    }
+    .ciudades {
+        grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px;
+        grid-template-columns: 1fr;
+        .ninjaByN {
+            grid-row: 1/3;
+            .dibujosEspacioVacio {
+                height: 250px;
+            }
+        }
+        .colonbn {
+            grid-row: 3/5;
+            .barcelonaEspacioVacio {
+                height: 250px;
+            }
+        }
+        .estambulHagiasofia {
+            grid-row: 5/6;
+            .estambulEspacioVacio {
+                height: 125px;
+            }
+        }
+        .notredam {
+            grid-row: 6/7;
+            .parisEspacioVacio {
+                height: 125px;
+            }
+        }
+        .dubrovnikbn {
+            grid-row: 7/8;
+            .dubrovnikEspacioVacio {
+                height: 125px;
+            }
+        }
+        .londresByn {
+            grid-row: 8/9;
+            .londresEspacioVacio {
+                height: 125px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .intro {
+        background-image: url(../imagenes/istambulbn.jpg);
+        height: 275px;
+        margin: 5px;
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .intro__titulo {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 27px;
+            font-weight: 700;
+            text-align: center;
+            padding:15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-sizing: border-box;
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        #introEspacioVacio {
+            height: 110px;
+        }
+    }
+    .ciudades {
+        grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+        grid-template-columns: 1fr;
+        .ninjaByN {
+            grid-row: 1/3;
+            .dibujosEspacioVacio {
+                height: 250px;
+            }
+        }
+        .colonbn {
+            grid-row: 3/5;
+            .barcelonaEspacioVacio {
+                height: 250px;
+            }
+        }
+        .estambulHagiasofia {
+            grid-row: 5/7;
+            .estambulEspacioVacio {
+                height: 250px;
+            }
+        }
+        .notredam {
+            grid-row: 7/9;
+            .parisEspacioVacio {
+                height: 250px;
+            }
+        }
+        .dubrovnikbn {
+            grid-row: 9/11;
+            .dubrovnikEspacioVacio {
+                height: 250px;
+            }
+        }
+        .londresByn {
+            grid-row: 11/13;
+            .londresEspacioVacio {
+                height: 250px;
+            }
+        }
+    }
+}
