@@ -1,2 +1,2 @@
 # ninjadelconurbano
-Website abour my drawings, travels and stuff
+Website about my drawings, travels and stuff
